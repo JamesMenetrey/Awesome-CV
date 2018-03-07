@@ -30,6 +30,10 @@
 
 <br />
 
+## What brings the fork?
+
+- Use the operating system fonts instead of the one located in the folder _fonts/_. More detais in the [issue on the official repository](https://github.com/posquit0/Awesome-CV/issues/196).
+
 ## What is Awesome CV?
 
 **Awesome CV** is LaTeX template for a **CV(Curriculum Vitae)**, **Résumé** or **Cover Letter** inspired by [Fancy CV](https://www.sharelatex.com/templates/cv-or-resume/fancy-cv). It is easy to customize your own template, especially since it is really written by a clean, semantic markup.

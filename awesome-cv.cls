@@ -93,8 +93,9 @@
 %-------------------------------------------------------------------------------
 %                Configuration for directory locations
 %-------------------------------------------------------------------------------
-% Configure a directory location for fonts(default: 'fonts/')
-\newcommand*{\fontdir}[1][fonts/]{\def\@fontdir{#1}}
+% Use the fonts installed in the operating system instead of hardcoding the path in the class file.
+% More information on https://github.com/posquit0/Awesome-CV/issues/196.
+\newcommand*{\fontdir}[1][]{\def\@fontdir{#1}}
 \fontdir
 
 
