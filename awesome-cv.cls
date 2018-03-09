@@ -578,6 +578,22 @@
   \end{tabular*}%
 }
 
+% Define a reference entry of cv information
+% Usage: \cvreference{<name>}{<title>}{<email>}{<phone>}
+\newcommand*{\cvreference}[4]{%
+  \vspace{-2.0mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth}}
+    {\entrytitlestyle{#1 \cdotp}}
+    \descriptionstyle{#2}
+    {\entrytitlestyle{\cdotp}}
+    \descriptionstyle{#3}
+    {\entrytitlestyle{\cdotp}}
+    \descriptionstyle{#4}
+  \end{tabular*}%
+}
+
 % Define an environment for cvsubentry
 \newenvironment{cvsubentries}{%
   \begin{center}

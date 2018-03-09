@@ -33,6 +33,7 @@
 ## What brings the fork?
 
 - Use the operating system fonts instead of the one located in the folder _fonts/_. More detais in the [issue on the official repository](https://github.com/posquit0/Awesome-CV/issues/196).
+- Provide the command `\cvreference` to create a list of people who refer you.
 
 ## What is Awesome CV?
 
