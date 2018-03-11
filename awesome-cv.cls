@@ -91,6 +91,8 @@
   pdfsubject={},
   pdfkeywords={}
 }
+% Needed to prevent page break just after a heading
+\RequirePackage{needspace}
 
 
 %-------------------------------------------------------------------------------
@@ -535,6 +537,7 @@
 % Usage: \cvsection{<section-title>}
 \newcommand{\cvsection}[1]{%
   \vspace{\acvSectionTopSkip}
+  \needspace{0.5cm}
   \sectionstyle{#1}
   \phantomsection
   \color{gray}\vhrulefill{0.9pt}
