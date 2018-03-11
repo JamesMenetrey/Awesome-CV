@@ -93,7 +93,10 @@
 }
 % Needed to prevent page break just after a heading
 \RequirePackage{needspace}
-
+% Needed to align referrers on two columns
+\RequirePackage{multicol}
+% Set the spaces before/after the multicols environment to 0
+\setlength\multicolsep{0pt}
 
 %-------------------------------------------------------------------------------
 %                Configuration for directory locations
@@ -587,17 +590,15 @@
 % Define a reference entry of cv information
 % Usage: \cvreference{<name>}{<title>}{<email>}{<phone>}
 \newcommand*{\cvreference}[4]{%
-  \vspace{-2.0mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth}}
-    {\entrytitlestyle{#1 \cdotp}}
-    \descriptionstyle{#2}
-    {\entrytitlestyle{\cdotp}}
-    \descriptionstyle{#3}
-    {\entrytitlestyle{\cdotp}}
-    \descriptionstyle{#4}
-  \end{tabular*}%
+  \begin{flushleft}
+    {\entrytitlestyle{#1}}\\
+    \descriptionstyle{#2}\\
+    \descriptionstyle{\faEnvelope\acvHeaderIconSep\ #3}\\
+    \descriptionstyle{\faPhone\acvHeaderIconSep\ #4}
+    \medskip
+  \end{flushleft}
 }
 
 % Define a simple key/value pair, where the key is written in bold.
