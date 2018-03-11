@@ -4,9 +4,12 @@
 % This class has been downloaded from:
 % https://github.com/posquit0/Awesome-CV
 %
-% Author:
+% Authors:
 % Claud D. Park <posquit0.bj@gmail.com>
 % http://www.posquit0.com
+%
+% Jämes Ménétrey
+% https://www.jamesmenetrey.com
 %
 % Notes:
 % 1) This class file defines the structure and layout of the template file (cv.tex, resume.tex).
@@ -593,6 +596,19 @@
     \descriptionstyle{#4}
   \end{tabular*}%
 }
+
+% Define a simple key/value pair, where the key is written in bold.
+% Usage: \cvkeyvaluepair{<key>}{<value>}
+\newcommand*{\cvkeyvaluepair}[2]{%
+  \vspace{-2.0mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth}}
+    {\entrytitlestyle{#1 \cdotp}}
+    \descriptionstyle{#2}
+  \end{tabular*}%
+}
+
 
 % Define an environment for cvsubentry
 \newenvironment{cvsubentries}{%
