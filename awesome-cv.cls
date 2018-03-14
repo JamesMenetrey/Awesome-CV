@@ -588,15 +588,15 @@
 }
 
 % Define a reference entry of cv information
-% Usage: \cvreference{<name>}{<title>}{<email>}{<phone>}
-\newcommand*{\cvreference}[4]{%
+% Usage: \cvreference{<name>}{<title>}{<company/school>}{<email>}{<phone>}
+\newcommand*{\cvreference}[5]{%
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \begin{flushleft}
-    {\entrytitlestyle{#1}}\\
-    \descriptionstyle{#2}\\
-    \descriptionstyle{\faEnvelope\acvHeaderIconSep\ #3}\\
-    \descriptionstyle{\faPhone\acvHeaderIconSep\ #4}
+    {\entrytitlestyle{#1}}, \descriptionstyle{#2}\\
+    \descriptionstyle{#3}\\
+    \descriptionstyle{\faEnvelope\acvHeaderIconSep\ #4}\\
+    \descriptionstyle{\faPhone\acvHeaderIconSep\ #5}
     \medskip
   \end{flushleft}
 }
