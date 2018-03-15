@@ -36,6 +36,7 @@
 - Provide the command `\cvreference` to create a list of people who refer you.
 - Provide the command `\cvkeyvaluepair` to incorporate simple listing elements, like skills listing.
 - Prevent that a heading is alone just before a pagebreak (introduction of the package [needspace](https://tex.stackexchange.com/a/32113/108649)).
+- The commands `\recipient` or `\recipientname` and `\recipientaddress` are optional.
 
 ## What is Awesome CV?
 
