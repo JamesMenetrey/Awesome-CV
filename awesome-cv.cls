@@ -370,10 +370,8 @@
 }
 
 % Defines the size of the photo.
-% Usage: \photosize{<height/width>}
+% Usage: \photosizerectangle{<height/width/diameter>}
 \newcommand*{\photosize}[1]{\def\@photosize{#1}}
-% Sets its default value
-\photosize{1.8cm}
 
 
 %-------------------------------------------------------------------------------
@@ -419,8 +417,10 @@
   \newcommand*{\drawphoto}{%
     \ifthenelse{\isundefined{\@photo}}{}{%
       \newlength{\photodim}
-      \ifthenelse{\equal{\@photoshape}{circle}}%
-        {\setlength{\photodim}{1.3cm}}%
+      \ifthenelse{\isundefined{\@photosize}}%
+        {\ifthenelse{\equal{\@photoshape}{circle}}%
+          {\setlength{\photodim}{1.3cm}}%
+          {\setlength{\photodim}{1.8cm}}}
         {\setlength{\photodim}{\@photosize}}%
       \ifthenelse{\equal{\@photoedge}{edge}}%
         {\def\@photoborder{darkgray}}%
