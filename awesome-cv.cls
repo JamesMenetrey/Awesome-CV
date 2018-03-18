@@ -448,7 +448,7 @@
       \ifthenelse{\isundefined{\@mobile}}%
         {}%
         {%
-          \faMobile\acvHeaderIconSep\@mobile%
+          \faPhone\acvHeaderIconSep\@mobile%
           \setbool{isstart}{false}%
         }%
       \ifthenelse{\isundefined{\@email}}%
@@ -607,10 +607,10 @@
   \vspace{-2.0mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth}}
+  \begin{flushleft}
     {\entrytitlestyle{#1 \cdotp}}
     \descriptionstyle{#2}
-  \end{tabular*}%
+  \end{flushleft}
 }
 
 
