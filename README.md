@@ -35,6 +35,7 @@
 - Use the operating system fonts instead of the one located in the folder _fonts/_. More detais in the [issue on the official repository](https://github.com/posquit0/Awesome-CV/issues/196).
 - Provide the command `\cvreference` to create a list of people who refer you.
 - Provide the command `\cvkeyvaluepair` to incorporate simple listing elements, like skills listing.
+- Provide the command `\photosize` to set the size of the picture manually.
 - Prevent that a heading is alone just before a pagebreak (introduction of the package [needspace](https://tex.stackexchange.com/a/32113/108649)).
 - The commands `\recipient` or `\recipientname` and `\recipientaddress` are optional.
 
