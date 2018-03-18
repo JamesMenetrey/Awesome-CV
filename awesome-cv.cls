@@ -263,6 +263,10 @@
 \def\@photoedge{edge}
 \def\@photoalign{left}
 
+% Overrides the size of the photo ID if needed.
+% Usage: \photosizerectangle{<new height/width/diameter>}
+\newcommand*{\photosize}[1]{\def\@photosize{#1}}
+
 % Define writer's name
 % Usage: \name{<firstname>}{<lastname>}
 % Usage: \firstname{<firstname>}
@@ -368,10 +372,6 @@
   \ifthenelse{\equal{#1}{}}{}{\def\@letterenclname{#1}}
   \def\@letterenclosure{#2}
 }
-
-% Defines the size of the photo.
-% Usage: \photosizerectangle{<height/width/diameter>}
-\newcommand*{\photosize}[1]{\def\@photosize{#1}}
 
 
 %-------------------------------------------------------------------------------
