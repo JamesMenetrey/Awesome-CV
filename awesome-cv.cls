@@ -364,6 +364,10 @@
 % Usage: \letterclosing{<message>}
 \newcommand*{\letterclosing}[1]{\def\@letterclosing{#1}}
 
+% Defines a picture that contains the signature, displayed at the end of the cover letter (optional).
+% Usage: \signaturepicture[<scale (integer)>]{<path>}
+\newcommand*{\signaturepicture}[2][1]{\def\@signaturepicturescale{#1}\def\@signaturepicture{#2}}
+
 % Defines an enclosure for letter (cover letter only, optional)
 % Usage: \letterenclosure[<enclosure name>]{<enclosure>}
 \newcommand*{\letterenclname}[1][Enclosure]{\def\@letterenclname{#1}}
@@ -748,7 +752,14 @@
 % Usage: \makeletterclosing
 \newcommand*{\makeletterclosing}{%
   \vspace{3.4mm}
-  \lettertextstyle{\@letterclosing} \\\\[2cm]
+  \lettertextstyle{\@letterclosing} \\\\
+  \ifthenelse{\isundefined{\@signaturepicture}}
+    {}
+    {%
+      \\
+      \includegraphics[scale=\@signaturepicturescale]{\@signaturepicture}
+      \\
+    }
   \letternamestyle{\@firstname\ \@lastname}
   \ifthenelse{\isundefined{\@letterenclosure}}
     {\\}
