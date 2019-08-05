@@ -133,7 +133,7 @@
 \definecolor{black}{HTML}{000000}
 \definecolor{darkgray}{HTML}{333333}
 \definecolor{gray}{HTML}{5D5D5D}
-\definecolor{lightgray}{HTML}{999999}
+\definecolor{lightgray}{HTML}{5D5D5D}
 % Basic colors
 \definecolor{green}{HTML}{C2E15F}
 \definecolor{orange}{HTML}{FDA333}
@@ -144,7 +144,7 @@
 \definecolor{darktext}{HTML}{414141}
 \colorlet{text}{darkgray}
 \colorlet{graytext}{gray}
-\colorlet{lighttext}{lightgray}
+\colorlet{lighttext}{gray}
 % Awesome colors
 \definecolor{awesome-emerald}{HTML}{00A388}
 \definecolor{awesome-skyblue}{HTML}{0395DE}
